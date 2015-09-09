@@ -1,0 +1,12 @@
+*.pyc
+wechat/*.pyc
+.idea/*
+.idea
+wechat/log/*
+wechat/settings.py
+app/*.pyc
+app/migrations/
+*.log
+env/
+settings.py
+*.pid
