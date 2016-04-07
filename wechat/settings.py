@@ -10,8 +10,8 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -25,7 +25,6 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -52,7 +51,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'wechat.urls'
 
 WSGI_APPLICATION = 'wechat.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
@@ -82,19 +80,20 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
 
-SITE_SRC_ROOT = os.path.dirname(__file__)
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), '..', 'static')
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), '..', 'media')
+MEDIA_URL = '/media/'
 LOG_FILENAME = 'django.wechat.log'
 LOGGING = {
-    'version':1,
+    'version': 1,
     'formatters': {
         'default': {
-              'format':'%(levelname)s: %(asctime)s %(module)s %(process)d %(thread)d %(message)s %(filename)s:%(funcName)s:%(lineno)d'
+            'format': '%(levelname)s: %(asctime)s %(module)s %(process)d %(thread)d %(message)s %(filename)s:%(funcName)s:%(lineno)d'
         }
     },
     'handlers': {
@@ -110,7 +109,7 @@ LOGGING = {
             'propagate': True,
         },
     },
-    'root' : {
+    'root': {
         'handlers': ['file'],
         'level': 'DEBUG',
     },
