@@ -7,7 +7,6 @@
 ![Alt text](http://badge.kloud51.com/pypi/f/django-wechat.svg)
 <!-- ![Alt text](http://badge.kloud51.com/pypi/w/django-wechat.svg) -->
 <!-- ![Alt text](http://badge.kloud51.com/pypi/e/django-wechat.svg) -->
-### 项目已转移到Github:https://github.com/tolerious/django-wechat
 ### 微信企业号Django版本
 
 请根据需要修改wechat.ini中的内容,一般是可以选择单跑uwsgi或者是nginx+uwsgi滴,当然，你也可以另类些，只跑django，LOL.....uwsgi跟nginx的相关配置可以参考`uwsgi+nginx`配置一节
