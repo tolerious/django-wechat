@@ -1,1 +1,4 @@
 .idea/
+*.pyc
+app/*.pyc
+wechat/*.pyc
