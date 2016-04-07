@@ -60,8 +60,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wechat',
-        'USER': 'wechat',
-        'PASSWORD': '#@(!@#@&*',
+        'USER': 'root',
+        'PASSWORD': 'fenghelong',
         'HOST': 'localhost',
         'PORT': '3306',
         'CONN_MAX_AGE': 600,
