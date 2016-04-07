@@ -1,12 +1,12 @@
 ![Alt text](http://badge.kloud51.com/pypi/d/django-wechat.svg)
 ![Alt text](http://badge.kloud51.com/pypi/v/django-wechat.svg)
 ![Alt text](http://badge.kloud51.com/pypi/py_versions/django-wechat.svg)
-<!-- ![Alt text](http://badge.kloud51.com/pypi/w/django-wechat.svg) -->
-<!-- ![Alt text](http://badge.kloud51.com/pypi/e/django-wechat.svg) -->
 ![Alt text](http://badge.kloud51.com/pypi/i/django-wechat.svg)
 ![Alt text](http://badge.kloud51.com/pypi/s/django-wechat.svg)
 ![Alt text](http://badge.kloud51.com/pypi/l/django-wechat.svg)
 ![Alt text](http://badge.kloud51.com/pypi/f/django-wechat.svg)
+<!-- ![Alt text](http://badge.kloud51.com/pypi/w/django-wechat.svg) -->
+<!-- ![Alt text](http://badge.kloud51.com/pypi/e/django-wechat.svg) -->
 ### 项目已转移到Github:https://github.com/tolerious/django-wechat
 ### 微信企业号Django版本
 
