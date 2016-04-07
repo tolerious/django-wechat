@@ -1,4 +1,5 @@
 ![Alt text](http://badge.kloud51.com/pypi/d/django-wechat.svg)
+![Alt text](http://badge.kloud51.com/pypi/v/django-wechat.svg)
 ### 项目已转移到Github:https://github.com/tolerious/django-wechat
 ### 微信企业号Django版本
 
