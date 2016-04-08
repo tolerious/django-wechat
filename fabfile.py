@@ -26,7 +26,7 @@ def m(b="master", c=" 我们一起啪啪啪 "):
         run("git pull origin %s" % b)
         run("source ../bin/activate")
         run("source ../bin/activate&&python manage.py collectstatic")
-        # run("cd .. && python restart_uwsgi.py uwsgi.ini")
+        run("cd .. && python restart_uwsgi.py uwsgi_wechat.ini")
 
 
 def p(b, c=" 我们一起啪啪啪 "):
