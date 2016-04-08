@@ -1,8 +1,9 @@
 __author__ = 'tolerious'
 from django.conf.urls import patterns, url
 
-from app import views
+from app.views import basic
+
 urlpatterns = patterns('',
-                       url(r'^', views.index, name='index'),
-                       url(r'^token/$', views.accesstoken, name='accesstoken'),
+                       url(r'^', basic.index, name='index'),
+                       url(r'^token/$', basic.accesstoken, name='accesstoken'),
                        )
