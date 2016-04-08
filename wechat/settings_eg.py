@@ -10,8 +10,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+SITE_SRC_ROOT = os.path.dirname(__file__)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -25,7 +26,6 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -53,7 +53,6 @@ ROOT_URLCONF = 'wechat.urls'
 
 WSGI_APPLICATION = 'wechat.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
@@ -61,8 +60,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wechat',
-        'USER': 'wechat',
-        'PASSWORD': '#@(!@#@&*',
+        'USER': 'root',
+        'PASSWORD': 'fenghelong',
         'HOST': 'localhost',
         'PORT': '3306',
         'CONN_MAX_AGE': 600,
@@ -82,19 +81,20 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
 
-SITE_SRC_ROOT = os.path.dirname(__file__)
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), '..', 'static')
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), '..', 'media')
+MEDIA_URL = '/media/'
 LOG_FILENAME = 'django.wechat.log'
 LOGGING = {
-    'version':1,
+    'version': 1,
     'formatters': {
         'default': {
-              'format':'%(levelname)s: %(asctime)s %(module)s %(process)d %(thread)d %(message)s %(filename)s:%(funcName)s:%(lineno)d'
+            'format': '%(levelname)s: %(asctime)s %(module)s %(process)d %(thread)d %(message)s %(filename)s:%(funcName)s:%(lineno)d'
         }
     },
     'handlers': {
@@ -110,8 +110,15 @@ LOGGING = {
             'propagate': True,
         },
     },
-    'root' : {
+    'root': {
         'handlers': ['file'],
         'level': 'DEBUG',
     },
 }
+
+APP_ID = "wx73cedfdd4ac51d80"
+APP_SECRET = "c3733fd7005584fbaaf8e93264062bb6"
+API_KEY = "meiparking4106211993022345770000"
+AES_KEY = "MIKLgzELMbnortUEmlf8z21y1P91ndC8JF5OULcJymv"
+WX_TOKEN = "tolerious"
+MARKET_NUMBER = "1279299701"

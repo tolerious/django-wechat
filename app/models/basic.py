@@ -3,14 +3,15 @@ import requests, logging
 import datetime,pytz
 from wechat_server import *
 from app.utils.utils import *
+from django.conf import settings
 
 # Create your models here.
 
 class AccessToken(models.Model):
-    corpid = models.CharField(default='corpid', max_length=200)
-    corpsecret = models.CharField(default='corpsecret', max_length=200)
-    token = models.CharField(default='abc', max_length=1000)
-    aeskey = models.CharField(default='abc', max_length=1000)
+    corpid = models.CharField(default=settings.APP_ID, max_length=200)
+    corpsecret = models.CharField(default=settings.APP_SECRET, max_length=200)
+    token = models.CharField(default=settings.WX_TOKEN, max_length=1000)
+    aeskey = models.CharField(default=settings.AES_KEY, max_length=1000)
     create_time = models.DateTimeField(default=datetime.datetime.now)
     accesstoken = models.CharField(default="",max_length=500)
 
