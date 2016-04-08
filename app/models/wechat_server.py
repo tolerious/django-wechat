@@ -4,7 +4,7 @@ Created on 03 19, 2015
 @author: tolerious
 
 '''
-from basic import AccessToken
+from app.models import *
 from django.db import models
 import requests, logging
 
