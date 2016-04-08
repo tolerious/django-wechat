@@ -3,7 +3,7 @@ __author__ = 'chonglou'
 
 import datetime
 import json,xml.etree.ElementTree as et
-from WXBizMsgCrypt import *
+from app.WXBizMsgCrypt import *
 
 def python_time_to_javascript(python_datetime):
     if python_datetime is not None:

@@ -2,3 +2,7 @@
 *.pyc
 app/*.pyc
 wechat/*.pyc
+static/
+app/models/*.pyc
+app/views/*.pyc
+app/utils/*.pyc

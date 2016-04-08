@@ -4,12 +4,12 @@ from django.template.loader import get_template
 from django.shortcuts import render
 import logging
 from htmllib import HTMLParser
-from api_errors import *
+from app.api_errors import *
 import json,xml.etree.ElementTree as et
-from models import *
-from WXBizMsgCrypt import *
+from app.models.basic import *
+from app.WXBizMsgCrypt import *
 from django.views.decorators.csrf import csrf_exempt
-from utils import *
+from app.utils.utils import *
 import xmlrpclib
 from django.core import serializers
 # Create your views here.
