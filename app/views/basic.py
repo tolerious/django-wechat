@@ -18,6 +18,7 @@ from django.core import serializers
 
 @csrf_exempt
 def index(request):
+    print "sdfsdfsdf"
     logging.info("#################enter ... ")
     if request.method == "GET":
         logging.info(request.method)
