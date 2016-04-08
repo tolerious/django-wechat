@@ -5,13 +5,15 @@ from django.shortcuts import render
 import logging
 from htmllib import HTMLParser
 from app.api_errors import *
-import json,xml.etree.ElementTree as et
+import json, xml.etree.ElementTree as et
 from app.models.basic import *
 from app.WXBizMsgCrypt import *
 from django.views.decorators.csrf import csrf_exempt
 from app.utils.utils import *
 import xmlrpclib
 from django.core import serializers
+
+
 # Create your views here.
 
 @csrf_exempt
@@ -19,10 +21,10 @@ def index(request):
     logging.info("#################enter ... ")
     if request.method == "GET":
         logging.info(request.method)
-        atoken = AccessToken.objects.get(id=1)
-        corpid = atoken.corpid
-        aeskey = atoken.aeskey
-        token = atoken.token
+        # atoken = AccessToken.objects.get(id=1)
+        corpid = settings.APP_ID
+        aeskey = settings.AES_KEY
+        token = settings.WX_TOKEN
         wx = WXBizMsgCrypt(token, aeskey, corpid)
         logging.info(request.GET)
         timestamp = request.GET['timestamp']
@@ -33,7 +35,7 @@ def index(request):
         logging.info(ret)
         logging.info(return_token)
         if ret != 0:
-           logger.info('............Error: Verify failed!!!')
+            logger.info('............Error: Verify failed!!!')
         logging.info('timestamp:%s,msg_signature:%s,nonce:%s,echostr:%s', timestamp, msg_signature, nonce, echostr)
         logging.info(request.get_full_path())
         if request.GET.has_key('echostr'):
@@ -43,14 +45,14 @@ def index(request):
             return HttpResponse('validate page')
 
     elif request.method == "POST":
-        #todo : judge if the message is valid
+        # todo : judge if the message is valid
         # logging.info(request.REQUEST['signature'])
         logging.info(request.body)
-        to_user_name = get_xml_text_by_property(request.body,"ToUserName")
-        from_user_name = get_xml_text_by_property(request.body,"FromUserName")
-        message_type = get_xml_text_by_property(request.body,"MsgType")
-        create_time  = get_xml_text_by_property(request.body,"CreateTime")
-        message_content = get_xml_text_by_property(request.body,"Content")
+        to_user_name = get_xml_text_by_property(request.body, "ToUserName")
+        from_user_name = get_xml_text_by_property(request.body, "FromUserName")
+        message_type = get_xml_text_by_property(request.body, "MsgType")
+        create_time = get_xml_text_by_property(request.body, "CreateTime")
+        message_content = get_xml_text_by_property(request.body, "Content")
         logging.info(to_user_name)
         logging.info(create_time)
         logging.info("............................POST")
@@ -67,19 +69,22 @@ def index(request):
         # content_element.text = '<![CDATA[' + "Hello" + ']]>'
         # xml_return_string = et.tostring(root_element)
         # logging.info(xml_return_string)
-        xml_return_string = TextMessage.TextMessageTemplate.format(toUser=from_user_name,fromUser=to_user_name,create_time=create_time,message_content=message_content)
+        xml_return_string = TextMessage.TextMessageTemplate.format(toUser=from_user_name, fromUser=to_user_name,
+                                                                   create_time=create_time,
+                                                                   message_content=message_content)
         logging.info(xml_return_string)
-        file_object = open("text_message.xml",'w')
+        file_object = open("text_message.xml", 'w')
         file_object.write(xml_return_string)
         file_object.close()
-        open_file = open('text_message.xml','r')
-        file_string  = open_file.read()
+        open_file = open('text_message.xml', 'r')
+        file_string = open_file.read()
         open_file.close()
 
-        return HttpResponse(file_string,content_type="text/xml")
+        return HttpResponse(file_string, content_type="text/xml")
     else:
         logging.info('...............other method.')
         return Http200(request)
+
 
 def accesstoken(request):
     new_token = AccessToken.objects.get(pk=1)
