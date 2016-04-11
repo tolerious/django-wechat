@@ -6,10 +6,10 @@ static/
 app/models/*.pyc
 app/views/*.pyc
 app/utils/*.pyc
-django-weixin/*.pyc
-django-weixin/models/*.pyc
-django-weixin/views/*.pyc
-django-weixin/utils/*.pyc
-packages/django-weixin/django_weixin.egg-info/
-packages/django-weixin/dist/
-packages/django-weixin/app/
+django_weixin/*.pyc
+django_weixin/models/*.pyc
+django_weixin/views/*.pyc
+django_weixin/utils/*.pyc
+packages/django_weixin/django_weixin.egg-info/
+packages/django_weixin/dist/
+packages/django_weixin/django_weixin/

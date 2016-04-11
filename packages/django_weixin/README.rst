@@ -13,11 +13,11 @@ Quick start
 
     INSTALLED_APPS = (
         ...
-        'django-weixin',
+        'django_weixin',
     )
 
 2. 配置URL路由::
 
-    url(r'^django-weixin/', include('app.urls')),
+    url(r'^django-weixin/', include('django_weixin.urls')),
 
 3. 运行'python manage.py makemigrations && python manage.py migrate'命令来进行model的创建.
