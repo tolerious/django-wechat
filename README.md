@@ -47,7 +47,9 @@ account.aeskey = your_EncodingAESKey
 account.save()
 ```
 当然你也可以通过读写一个配置文件的形式来操作,或者写在settings.py文件中调用,根据个人喜好
-然后进入到填写回调模式验证的界面，如图:![Alt text](http://ww2.sinaimg.cn/mw690/a036a21agw1eqbat7mbi9j20xg0oqgp5.jpg)
+然后进入到填写回调模式验证的界面，如图:
+![Alt text](http://ww2.sinaimg.cn/mw690/a036a21agw1eqbat7mbi9j20xg0oqgp5.jpg)
+
 URL处填写你的server IP，后面跟一个validate/，这里填写的token要跟你在上图中所填写的一样，同样aeskey也要跟你在界面上填写的保持一致，这些数据是后续步骤所需要的。
 友情提示：如果你在验证过一次后对你的token或者EncodingAESKey做了修改，请重启uwsgi，理论上不需要重启，但是遇到过几次要重启的情况。
 
