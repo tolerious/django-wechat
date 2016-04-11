@@ -6,3 +6,7 @@ static/
 app/models/*.pyc
 app/views/*.pyc
 app/utils/*.pyc
+django-wechat/*.pyc
+django-wechat/models/*.pyc
+django-wechat/views/*.pyc
+django-wechat/utils/*.pyc
