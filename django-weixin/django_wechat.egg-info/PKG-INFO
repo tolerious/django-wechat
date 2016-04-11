@@ -7,7 +7,7 @@ Author: tolerious
 Author-email: tolerious@qq.com
 License: MIT License
 Description: =====
-        Django-wechat
+        django-weixin
         =====
         
         Django-wechat采用Django框架实现微信公众号的开发.
@@ -17,16 +17,16 @@ Description: =====
         Quick start
         -----------
         
-        1. 添加'django-wechat'在你的setting.py文件中::
+        1. 添加'django-weixin'在你的setting.py文件中::
         
             INSTALLED_APPS = (
                 ...
-                'django-wechat',
+                'django-weixin',
             )
         
         2. 配置URL路由::
         
-            url(r'^django-wechat/', include('app.urls')),
+            url(r'^django-weixin/', include('app.urls')),
         
         3. 运行'python manage.py makemigrations && python manage.py migrate'命令来进行model的创建.
         
