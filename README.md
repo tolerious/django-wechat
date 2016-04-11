@@ -1,4 +1,4 @@
-![Alt text](http://badge.kloud51.com/pypi/d/django-weixin.svg)
+![Alt text](http://badge.kloud51.com/pypi/d/django_weixin.svg)
 ![Alt text](http://badge.kloud51.com/pypi/v/django-weixin.svg)
 ![Alt text](http://badge.kloud51.com/pypi/py_versions/django-weixin.svg)
 ![Alt text](http://badge.kloud51.com/pypi/i/django-weixin.svg)
