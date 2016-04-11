@@ -1,10 +1,10 @@
-![Alt text](http://badge.kloud51.com/pypi/d/django-weixin.png)
-![Alt text](http://badge.kloud51.com/pypi/v/django-weixin.png)
-![Alt text](http://badge.kloud51.com/pypi/py_versions/django-weixin.png)
-![Alt text](http://badge.kloud51.com/pypi/i/django-weixin.png)
-![Alt text](http://badge.kloud51.com/pypi/s/django-weixin.png)
-![Alt text](http://badge.kloud51.com/pypi/l/django-weixin.png)
-![Alt text](http://badge.kloud51.com/pypi/f/django-weixin.png)
+![Alt text](http://badge.kloud51.com/pypi/d/django-weixin.svg)
+![Alt text](http://badge.kloud51.com/pypi/v/django-weixin.svg)
+![Alt text](http://badge.kloud51.com/pypi/py_versions/django-weixin.svg)
+![Alt text](http://badge.kloud51.com/pypi/i/django-weixin.svg)
+![Alt text](http://badge.kloud51.com/pypi/s/django-weixin.svg)
+![Alt text](http://badge.kloud51.com/pypi/l/django-weixin.svg)
+![Alt text](http://badge.kloud51.com/pypi/f/django-weixin.svg)
 <!-- ![Alt text](http://badge.kloud51.com/pypi/w/django-wechat.svg) -->
 <!-- ![Alt text](http://badge.kloud51.com/pypi/e/django-wechat.svg) -->
 ### 微信公众号Django版本
