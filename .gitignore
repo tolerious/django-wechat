@@ -10,3 +10,5 @@ django-wechat/*.pyc
 django-wechat/models/*.pyc
 django-wechat/views/*.pyc
 django-wechat/utils/*.pyc
+django-wechat/django_wechat.egg-info/
+django-wechat/dist/
