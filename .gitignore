@@ -6,9 +6,9 @@ static/
 app/models/*.pyc
 app/views/*.pyc
 app/utils/*.pyc
-django-wechat/*.pyc
-django-wechat/models/*.pyc
-django-wechat/views/*.pyc
-django-wechat/utils/*.pyc
-django-wechat/django_wechat.egg-info/
-django-wechat/dist/
+django-weixin/*.pyc
+django-weixin/models/*.pyc
+django-weixin/views/*.pyc
+django-weixin/utils/*.pyc
+django-weixin/django_weixin.egg-info/
+django-weixin/dist/
