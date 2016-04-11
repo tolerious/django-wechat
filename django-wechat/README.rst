@@ -1,5 +1,5 @@
 =====
-django-wechat
+Polls
 =====
 
 Polls is a simple Django app to conduct Web-based polls. For each
@@ -14,7 +14,7 @@ Quick start
 
     INSTALLED_APPS = (
         ...
-        'django-wechat',
+        'polls',
     )
 
 2. Include the polls URLconf in your project urls.py like this::

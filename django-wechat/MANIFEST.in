@@ -1,1 +1,5 @@
+include LICENSE
+include README.rst
+recursive-include app/static *
+recursive-include app/templates *
 recursive-include docs *

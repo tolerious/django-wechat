@@ -6,6 +6,7 @@ Created on 04 11, 2016
 
 '''
 
+
 import os
 from setuptools import setup
 
@@ -18,9 +19,9 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-wechat',
     version='0.1',
-    packages=['django-wechat'],
+    packages=['app'],
     include_package_data=True,
-    license='BSD License',  # example license
+    license='MIT License',  # example license
     description='A simple Django app to implementation Wechat API.',
     long_description=README,
     url='http://tobe.engineer/',
@@ -30,7 +31,7 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',  # example license
+        'License :: OSI Approved :: MIT License', # example license
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         # Replace these appropriately if you are stuck on Python 2.
