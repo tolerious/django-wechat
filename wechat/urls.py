@@ -5,7 +5,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'wechat.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    url(r'django-wechat/',include('app.urls')),
+    url(r'django-weixin/',include('app.urls')),
     # url(r'^validate/', include('app.urls', namespace='app')),
     url(r'^access/', include('app.urls')),
     # url(r'api/', include('apis.urls')),

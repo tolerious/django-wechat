@@ -1,0 +1,43 @@
+Metadata-Version: 1.1
+Name: django-wechat
+Version: 0.1
+Summary: A simple Django app to implementation Wechat API.
+Home-page: http://tobe.engineer/
+Author: tolerious
+Author-email: tolerious@qq.com
+License: MIT License
+Description: =====
+        Django-wechat
+        =====
+        
+        Django-wechat采用Django框架实现微信公众号的开发.
+        
+        详尽的文档在 "docs" 文件夹中.
+        
+        Quick start
+        -----------
+        
+        1. 添加'django-wechat'在你的setting.py文件中::
+        
+            INSTALLED_APPS = (
+                ...
+                'django-wechat',
+            )
+        
+        2. 配置URL路由::
+        
+            url(r'^django-wechat/', include('app.urls')),
+        
+        3. 运行'python manage.py makemigrations && python manage.py migrate'命令来进行model的创建.
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
