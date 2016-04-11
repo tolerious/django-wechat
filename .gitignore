@@ -12,3 +12,4 @@ django-weixin/views/*.pyc
 django-weixin/utils/*.pyc
 django-weixin/django_weixin.egg-info/
 django-weixin/dist/
+django-weixin/app/
