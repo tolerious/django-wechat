@@ -34,7 +34,7 @@ enable-threads = true
 plugins = python
 ```
 
-### 配置回调URL及密钥,验证通过开发者资格
+### 配置回调URL及密钥,验证开发者资格
 由于corpid跟corpsecret是很私密的东西，所以不能直接写在源码里面的，我放在了数据库中，所以在使用之前要先进入`python manage.py shell`的环境中去，把你的微信平台对应的信息创建出来.当然了是可以通过在Django后台的那个管理界面上创建register一个界面来实现，懒，
 具体：
 ```
