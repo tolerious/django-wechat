@@ -19,10 +19,10 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-weixin',
     version='0.1.3',
-    packages=['app'],
+    packages=['django_weixin'],
     include_package_data=True,
     license='MIT License',  # example license
-    description='A simple Django app to implementation Wechat API.',
+    description='A simple Django application to implementation Wechat API.',
     long_description=README,
     url='http://tobe.engineer/',
     author='tolerious',

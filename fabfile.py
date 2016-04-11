@@ -17,11 +17,11 @@ env.roledefs = {
 def m(b="master", c=" 我们一起啪啪啪 "):
     with settings(warn_only=True):
         local("git commit -am ' update..., %s ;'&&git push origin %s" % (c, b))
-        local("mkdir -p packages/django-weixin")
-        local("cp -R app packages/django-weixin")
-        local("cd packages/django-weixin && python setup.py sdist")
-        local("cd packages/django-weixin && twine upload dist/*")
-    with cd("/home/tolerious/wechat_env/django-wechat"):
+        local("mkdir -p packages/django_weixin")
+        local("cp -R django_weixin packages/django_weixin")
+        local("cd packages/django_weixin && python setup.py sdist")
+        local("cd packages/django_weixin && twine upload dist/*")
+    with cd("/home/tolerious/wechat_env/django_wechat"):
         run("git stash")
         commend = "git ck %s" % b
         run("git fetch")

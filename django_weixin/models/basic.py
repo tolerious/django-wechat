@@ -2,7 +2,7 @@ from django.db import models
 import requests, logging
 import datetime,pytz
 from wechat_server import *
-from app.utils.utils import *
+from django_weixin.utils.utils import *
 from django.conf import settings
 
 # Create your models here.
