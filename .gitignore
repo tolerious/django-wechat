@@ -13,3 +13,4 @@ django_weixin/utils/*.pyc
 packages/django_weixin/django_weixin.egg-info/
 packages/django_weixin/dist/
 packages/django_weixin/django_weixin/
+wechat/log/django.wechat.log

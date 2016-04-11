@@ -1,5 +1,10 @@
-__author__ = 'chonglou'
+# -*- coding: utf-8 -*-
+'''
+Created on 04 08, 2016
 
+@author: tolerious
+
+'''
 import datetime
 import json, xml.etree.ElementTree as et
 from django_weixin.WXBizMsgCrypt import *
@@ -31,3 +36,9 @@ def judge_message_is_valid(access_token, aeskey, corpid, signature, timestamp, n
     wx = WXBizMsgCrypt(access_token, aeskey, corpid)
     ret, return_token = wx.VerifyURL(signature, timestamp, nonce, echostr)
     return ret, return_token  # if ret == 0, valid
+
+def generate_create_base_menu_button_json():  #生成基础功能的button,click,view类型的button
+    base_json = {
+        "button":[]
+    }
+    return base_json

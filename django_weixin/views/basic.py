@@ -4,12 +4,12 @@ from django.template.loader import get_template
 from django.shortcuts import render
 import logging
 from htmllib import HTMLParser
-from app.api_errors import *
+from django_weixin.api_errors import *
 import json, xml.etree.ElementTree as et
-from app.models.basic import *
-from app.WXBizMsgCrypt import *
+from django_weixin.models.basic import *
+from django_weixin.WXBizMsgCrypt import *
 from django.views.decorators.csrf import csrf_exempt
-from app.utils.utils import *
+from django_weixin.utils.utils import *
 import xmlrpclib
 from django.core import serializers
 
