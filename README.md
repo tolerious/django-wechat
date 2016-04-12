@@ -59,3 +59,4 @@ URL处填写你的server IP，后面跟一个validate/，这里填写的token要
 调用`app`模块中AccessToken类中的`get_access_token`方法即可返回access_token
 
 ###
+
