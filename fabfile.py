@@ -16,7 +16,7 @@ env.roledefs = {
 
 def m(b="master", c=" 我们都是好孩子. "):
     with settings(warn_only=True):
-        local("source ../bin/activate && python manage.py collectstatic")
+        local("source ../bin/activate && python manage.py collectstatic --noinput")
         local("git commit -am '  %s ;'&&git push origin %s" % (c, b))
         local("mkdir -p packages/django_weixin")
         local("cp -R django_weixin packages/django_weixin")
@@ -31,7 +31,7 @@ def m(b="master", c=" 我们都是好孩子. "):
         run(commend)
         run("git pull origin %s" % b)
         run("source ../bin/activate")
-        run("source ../bin/activate&&python manage.py collectstatic")
+        run("source ../bin/activate&&python manage.py collectstatic --noinput")
         run("cd .. && python restart_uwsgi.py uwsgi_wechat.ini")
 
 
