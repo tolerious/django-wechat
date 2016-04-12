@@ -20,9 +20,9 @@ def restart_uwsgi_process(filename):
     try:
         ps_string = "ps -ef | grep " + filename
         status_0, output_0 = commands.getstatusoutput(ps_string)
-        print output_0
+        # print output_0
         out_put_list = output_0.split("  ")
-        print out_put_list
+        # print out_put_list
         uwsgi_pid = out_put_list[1]
         print uwsgi_pid
         kill_str = 'kill -9 ' + uwsgi_pid
