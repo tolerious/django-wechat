@@ -11,7 +11,7 @@ function confirm_button_click() {
     var menu_3_array = new Array();
 
     for (i = 1; i < 16; i++) {
-        if (i < 6) {
+        if (i < 6) { 
             menu_1_array.push($("#sub_" + i).val());
         }
         if (i > 5 && i < 11) {
