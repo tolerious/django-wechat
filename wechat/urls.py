@@ -10,4 +10,5 @@ urlpatterns = patterns('',
     url(r'^access/', include('django_weixin.urls')),
     # url(r'api/', include('apis.urls')),
     url(r'^admin/', include(admin.site.urls)),
+
 )
