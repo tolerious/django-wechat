@@ -22,6 +22,7 @@ def restart_uwsgi_process(filename):
         status_0, output_0 = commands.getstatusoutput(ps_string)
         out_put_list = output_0.split("  ")
         uwsgi_pid = out_put_list[1]
+        print uwsgi_pid
         kill_str = 'kill -9 ' + uwsgi_pid
         status_1, output_1 = commands.getstatusoutput(kill_str)
         command_str = 'uwsgi --ini' + ' ' + filename
