@@ -1,0 +1,26 @@
+@media screen and (max-width: 3000px) and (min-width: 800px) {
+    .menu-preview {
+        height: 500px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .menu-config-container {
+        width: 98%;
+        height: 600px;
+        margin: 0 auto;
+    }
+
+    .left-container, .middle-container, .right-container {
+        float: left;
+    }
+
+    .clear-left {
+        clear: left;
+    }
+
+    .confirm-button-container {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
