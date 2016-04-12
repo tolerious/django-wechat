@@ -5,3 +5,7 @@ $(function(){
 
 
 });
+
+function generate_create_menu_json(){
+    
+}
