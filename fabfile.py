@@ -16,6 +16,7 @@ env.roledefs = {
 
 def m(b="master", c=" 我们都是好孩子. "):
     with settings(warn_only=True):
+        local("source ../bin/active && python manage.py collectstatic")
         local("git commit -am '  %s ;'&&git push origin %s" % (c, b))
         local("mkdir -p packages/django_weixin")
         local("cp -R django_weixin packages/django_weixin")
