@@ -13,6 +13,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django_weixin.ierror import *
 from django_weixin.api_errors import *
+import logging
 
 
 def create_menu_admin(request):
@@ -21,6 +22,7 @@ def create_menu_admin(request):
 
 def create_basic_menu(request):
     if request.method == "POST":
-        pass
+        logging.info(request.body)
+        return Http200(request)
     else:
         return Http400(request)
