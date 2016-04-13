@@ -33,6 +33,7 @@ def restart_uwsgi_process(filename):
         if status_1 != 0:
             out_put_list_backup = output_0.split("  ")
             uwsgi_pid_backup = out_put_list_backup[1]
+            print uwsgi_pid_backup
             kill_str_back = 'kill -9' + uwsgi_pid_backup
             status_1_bak, output_1_bak = commands.getstatusoutput(kill_str_back)
         command_str = 'uwsgi --ini' + ' ' + filename
