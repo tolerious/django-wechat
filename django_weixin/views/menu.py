@@ -23,6 +23,7 @@ def create_menu_admin(request):
 def create_basic_menu(request):
     if request.method == "POST":
         logging.info(request.body)
+        print request.body
         return Http200(request)
     else:
         return Http400(request)
