@@ -33,10 +33,13 @@ def restart_uwsgi_process(filename):
         kill_str = 'kill -9 ' + uwsgi_pid
         kill_str_back = 'kill -9' + uwsgi_pid_backup
         status_1, output_1 = commands.getstatusoutput(kill_str)
-        status_1_bak, output_1_bak = commands.getstatusoutput(kill_str_back)
+        # status_1_bak, output_1_bak = commands.getstatusoutput(kill_str_back)
         command_str = 'uwsgi --ini' + ' ' + filename
         status, output = commands.getstatusoutput(command_str)
     except Exception as e:
+        status_1_bak, output_1_bak = commands.getstatusoutput(kill_str_back)
+        command_str = 'uwsgi --ini' + ' ' + filename
+        status, output = commands.getstatusoutput(command_str)
         print e
 
 
