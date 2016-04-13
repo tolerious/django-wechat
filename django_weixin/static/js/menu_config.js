@@ -9,15 +9,20 @@ function confirm_button_click() {
     var menu_1_array = new Array();
     var menu_2_array = new Array();
     var menu_3_array = new Array();
-
+    var name_1_array = new Array();
+    var name_2_array = new Array();
+    var name_3_array = new Array();
     for (i = 1; i < 16; i++) {
         if (i < 6) {
+            name_1_array.push($("name_" + i).val());
             menu_1_array.push($("#sub_" + i).val());
         }
         if (i > 5 && i < 11) {
+            name_2_array.push($("name_" + i).val());
             menu_2_array.push($("#sub_" + i).val());
         }
         if (i > 10) {
+            name_3_array.push($("name_" + i).val());
             menu_3_array.push($("#sub_" + i).val());
         }
     }
@@ -30,6 +35,7 @@ function confirm_button_click() {
                 "menu_title": main_menu_1
             },
             {
+                "child_menu_title": name_1_array,
                 "child_menu": menu_1_array
             }
         ],
@@ -38,6 +44,7 @@ function confirm_button_click() {
                 "menu_title": main_menu_2
             },
             {
+                "child_menu_title": name_2_array,
                 "child_menu": menu_2_array
             }
         ],
@@ -46,6 +53,7 @@ function confirm_button_click() {
                 "menu_title": main_menu_3
             },
             {
+                "child_menu_title": name_3_array,
                 "child_menu": menu_3_array
             }
         ]
