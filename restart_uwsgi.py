@@ -25,21 +25,19 @@ def restart_uwsgi_process(filename):
         status_0, output_0 = commands.getstatusoutput(ps_string)
         # print output_0
         out_put_list = output_0.split(" ")
-        out_put_list_backup = output_0.split("  ")
-        uwsgi_pid_backup = out_put_list_backup[1]
         # print out_put_list
         uwsgi_pid = out_put_list[1]
         print uwsgi_pid
         kill_str = 'kill -9 ' + uwsgi_pid
-        kill_str_back = 'kill -9' + uwsgi_pid_backup
         status_1, output_1 = commands.getstatusoutput(kill_str)
-        # status_1_bak, output_1_bak = commands.getstatusoutput(kill_str_back)
+        if status_1 != 0:
+            out_put_list_backup = output_0.split("  ")
+            uwsgi_pid_backup = out_put_list_backup[1]
+            kill_str_back = 'kill -9' + uwsgi_pid_backup
+            status_1_bak, output_1_bak = commands.getstatusoutput(kill_str_back)
         command_str = 'uwsgi --ini' + ' ' + filename
         status, output = commands.getstatusoutput(command_str)
     except Exception as e:
-        status_1_bak, output_1_bak = commands.getstatusoutput(kill_str_back)
-        command_str = 'uwsgi --ini' + ' ' + filename
-        status, output = commands.getstatusoutput(command_str)
         print e
 
 
