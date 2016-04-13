@@ -54,4 +54,18 @@ function confirm_button_click() {
     //console.log(menu_2_array);
     //console.log(menu_3_array);
     console.log(final_json_string);
+    $.ajax({
+            url: '/django-weixin/basic/menu/create/',
+            data: JSON.stringify(post_data),
+            type: 'POST', contentType: 'application/json', dataType: 'json',
+            beforeSend: function (xhr, o) {
+                xhr.setRequestHeader("X-CSRFToken", getCookieValue('csrftoken'));
+            }
+        })
+        .done(function (data) {
+        })
+        .fail(function (data) {
+        })
+        .always(function (data) {
+        })
 }
