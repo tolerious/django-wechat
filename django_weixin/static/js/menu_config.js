@@ -38,7 +38,9 @@ function confirm_button_click() {
     var final_json_string = {
         "menu_1": [
             {
-                "menu_title": main_menu_1
+                "menu_title": $("#main-menu-first-name").val(),
+                "menu_content": main_menu_1,
+                "menu_type": $("#menu_1_type").val()
             },
             {
                 "child_menu_title": name_1_array,
@@ -48,7 +50,9 @@ function confirm_button_click() {
         ],
         "menu_2": [
             {
-                "menu_title": main_menu_2
+                "menu_title": $("#main-menu-second-name").val(),
+                "menu_content": main_menu_2,
+                "menu_type": $("#menu_2_type").val()
             },
             {
                 "child_menu_title": name_2_array,
@@ -58,7 +62,9 @@ function confirm_button_click() {
         ],
         "menu_3": [
             {
-                "menu_title": main_menu_3
+                "menu_title": $("#main-menu-third-name").val(),
+                "menu_content": main_menu_3,
+                "menu_type": $("#menu_3_type").val()
             },
             {
                 "child_menu_title": name_3_array,
