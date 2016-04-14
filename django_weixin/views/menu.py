@@ -24,9 +24,11 @@ def create_basic_menu(request):
     if request.method == "POST":
         data = json.loads(request.body)
         logging.info(data)
-        menu_1 = data['menu_1']
-        menu_2 = data['menu_2']
-        menu_3 = data['menu_3']
+        menu_1_list = data['menu_1']
+        menu_2_list = data['menu_2']
+        menu_3_list = data['menu_3']
+        if menu_1_list[0]['menu_type'] == 0:
+            pass
         return Http200(request)
     else:
         return Http400(request)
