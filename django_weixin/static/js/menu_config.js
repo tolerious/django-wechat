@@ -42,7 +42,8 @@ function confirm_button_click() {
             },
             {
                 "child_menu_title": name_1_array,
-                "child_menu_content": menu_1_array
+                "child_menu_content": menu_1_array,
+                "menu_type": type_1_array
             }
         ],
         "menu_2": [
@@ -51,7 +52,8 @@ function confirm_button_click() {
             },
             {
                 "child_menu_title": name_2_array,
-                "child_menu_content": menu_2_array
+                "child_menu_content": menu_2_array,
+                "menu_type": type_2_array
             }
         ],
         "menu_3": [
@@ -60,7 +62,8 @@ function confirm_button_click() {
             },
             {
                 "child_menu_title": name_3_array,
-                "child_menu_content": menu_3_array
+                "child_menu_content": menu_3_array,
+                "menu_type": type_3_array
             }
         ]
     };
