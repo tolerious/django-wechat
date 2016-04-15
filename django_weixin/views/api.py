@@ -78,9 +78,13 @@ def create_meibo_menu(request):
     payload = whole_menu_dic
     # logging.info(payload)
     r = requests.post(url, data=json.dumps(payload, ensure_ascii=False))
-    logging.info(r.text)
     logging.info(r.json())
-    return Http200(request)
+    return_data = r.json()
+    if return_data['errmsg'] == "ok":
+        return Http200(request)
+    else:
+        return Http400(request)
+
 
 @csrf_exempt
 def delete_menu(request):
@@ -88,5 +92,7 @@ def delete_menu(request):
     token = token_obj.get_access_token()
     url = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=" + token
     r = requests.get(url)
-    logging.info(r.text)
-    return Http200(request)
+    if r.json()['errmsg'] == "ok":
+        return Http200(request)
+    else:
+        return Http400(request)
