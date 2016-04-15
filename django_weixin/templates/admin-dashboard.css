@@ -1,0 +1,10 @@
+.button-container {
+    width: 100%;
+    height: 200px;
+}
+
+#create-meibo-menu {
+    width:30px;
+    height: 20px;
+    background-color: #129FEA;
+}
