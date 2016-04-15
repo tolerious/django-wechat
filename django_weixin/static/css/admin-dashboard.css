@@ -4,8 +4,9 @@
 }
 
 #create-meibo-menu {
-    width:300px;
+    width: 300px;
     /*height: 200px;*/
     background-color: #129FEA;
     text-align: center;
+    margin: 0 auto;
 }
