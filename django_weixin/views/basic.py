@@ -88,6 +88,7 @@ def index(request):
 
 def get_access_token_view(request):
     new_token = AccessToken()
+    new_token.save()
     token = new_token.get_access_token()
     logging.info(token)
     context_data = {
