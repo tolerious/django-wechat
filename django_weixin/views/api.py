@@ -13,6 +13,64 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django_weixin.ierror import *
 from django_weixin.api_errors import *
-import logging, json
+import logging, json, requests
 
 
+@csrf_exempt
+def create_meibo_menu(request):
+    whole_menu_dic = {
+        "button": [
+            {
+                "name": "泊/取车",
+                "sub_button": [
+                    {
+                        "type": "view",
+                        "name": "我的订单",
+                        "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73cedfdd4ac51d80&redirect_uri=http%3a%2f%2fwx.meiparking.com%2fwechat%2forder%2flist%3fcurrent%3d1&response_type=code&scope=snsapi_base#wechat_redirect"
+                    },
+                    {
+                        "type": "view",
+                        "name": "预约服务",
+                        "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73cedfdd4ac51d80&redirect_uri=http%3a%2f%2fwx.meiparking.com%2fwechat%2freserve%2fpark%2f&response_type=code&scope=snsapi_base#wechat_redirect"
+                    }
+                ]
+            },
+            {
+                "name": "个人中心",
+                "sub_button": [
+                    {
+                        "type": "view",
+                        "name": "我的美泊",
+                        "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73cedfdd4ac51d80&redirect_uri=http%3a%2f%2fwx.meiparking.com%2fwechat%2fpersonal%2fcenter%2f&response_type=code&scope=snsapi_base#wechat_redirect"
+                    },
+                    {
+                        "type": "view",
+                        "name": "分享领红包",
+                        "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73cedfdd4ac51d80&redirect_uri=http%3a%2f%2fwx.meiparking.com%2fwechat%2fsharing%2fbonus%2f&response_type=code&scope=snsapi_base#wechat_redirect"
+                    },
+                    {
+                        "type": "view",
+                        "name": "新分享",
+                        "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73cedfdd4ac51d80&redirect_uri=http%3a%2f%2fwx.meiparking.com%2fwechat%2fmarket%2fh5%2f&response_type=code&scope=snsapi_base#wechat_redirect"
+                    }
+                ]
+            },
+            {
+                "name": "更多",
+                "sub_button": [
+                    {
+                        "type": "view",
+                        "name": "操作流程",
+                        "url": "http://a.app.qq.com/o/simple.jsp?pkgname=com.meiparking.meiparkingclient"
+                    }
+                ]
+            }
+        ]
+    }
+    token_obj = AccessToken.objects.get(pk=1)
+    token = token_obj.get_access_token()
+    url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + token
+    payload = whole_menu_dic
+    r = requests.post(url, data=payload)
+    logging.info(r.text)
+    logging.info(r.json())

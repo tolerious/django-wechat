@@ -9,4 +9,5 @@ urlpatterns = patterns('',
                        url(r'^menu/config/', menu.create_menu_admin, name='menu_admin_page'),
                        url(r'^basic/menu/create/', menu.create_basic_menu, name='create_basic_menu'),
                        url(r'^access/token/get/', basic.get_access_token_view, name='get_access_token_view'),
+                       url(r'^admin/dashboard/', basic.admin_dashboard, name='admin_dashboard'),
                        )

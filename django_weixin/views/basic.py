@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.http import HttpResponse, Http404
 from django.template import Template, Context
 from django.template.loader import get_template
@@ -94,3 +95,6 @@ def get_access_token_view(request):
         'access_token': token
     }
     return render(request, 'get_access_token.html', context_data)
+
+def admin_dashboard(request):
+    return render(request,'admin-dashboard.html')
