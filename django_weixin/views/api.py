@@ -87,6 +87,6 @@ def delete_menu(request):
     token_obj = AccessToken.objects.get(pk=1)
     token = token_obj.get_access_token()
     url = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=" + token
-    r = request.get(url)
+    r = requests.get(url)
     logging.info(r.text)
     return Http200(request)
