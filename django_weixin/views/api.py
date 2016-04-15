@@ -74,3 +74,4 @@ def create_meibo_menu(request):
     r = requests.post(url, data=payload)
     logging.info(r.text)
     logging.info(r.json())
+    return Http200(request)
