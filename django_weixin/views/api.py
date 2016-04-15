@@ -104,7 +104,7 @@ def create_meibo_menu(request):
     url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + token
     payload = whole_menu_dic
     logging.info(payload)
-    r = requests.post(url, data=payload)
+    r = requests.post(url, data=json.dumps(payload))
     logging.info(r.text)
     logging.info(r.json())
     return Http200(request)
