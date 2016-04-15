@@ -3,7 +3,7 @@
     height: 200px;
 }
 
-#create-meibo-menu {
+.menu-config-list {
     width: 300px;
     /*height: 200px;*/
     background-color: #129FEA;
