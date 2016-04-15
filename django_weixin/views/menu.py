@@ -20,7 +20,6 @@ def create_menu_admin(request):
     return render(request, 'menu_config.html')
 
 
-
 def create_basic_menu(request):
     if request.method == "POST":
         data = json.loads(request.body)
