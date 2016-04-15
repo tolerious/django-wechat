@@ -72,39 +72,20 @@ def create_meibo_menu(request):
             }
         ]
     }
-    whole_menu_dics = {
-        "button": [
-            {
-                "type": "click",
-                "name": u"你好",
-                "key": "V1001_TODAY_MUSIC"
-            },
-            {
-                "name": u"asdf",
-                "sub_button": [
-                    {
-                        "type": "view",
-                        "name": u"sdf",
-                        "url": "http://www.soso.com/"
-                    },
-                    {
-                        "type": "view",
-                        "name": u"asdf",
-                        "url": "http://v.qq.com/"
-                    },
-                    {
-                        "type": "click",
-                        "name": u"asdf",
-                        "key": "V1001_GOOD"
-                    }]
-            }]
-    }
     token_obj = AccessToken.objects.get(pk=1)
     token = token_obj.get_access_token()
     url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + token
     payload = whole_menu_dic
-    logging.info(payload)
+    # logging.info(payload)
     r = requests.post(url, data=json.dumps(payload, ensure_ascii=False))
     logging.info(r.text)
     logging.info(r.json())
+    return Http200(request)
+
+def delete_menu(request):
+    token_obj = AccessToken.objects.get(pk=1)
+    token = token_obj.get_access_token()
+    url = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=" + token
+    r = request.get(url)
+    logging.info(r.text)
     return Http200(request)
