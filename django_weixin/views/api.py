@@ -82,6 +82,7 @@ def create_meibo_menu(request):
     logging.info(r.json())
     return Http200(request)
 
+@csrf_exempt
 def delete_menu(request):
     token_obj = AccessToken.objects.get(pk=1)
     token = token_obj.get_access_token()
