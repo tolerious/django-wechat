@@ -10,6 +10,7 @@
 
 ### 微信公众号Django版本
 项目主页: https://github.com/tolerious/django-wechat
+
 详尽的项目文档: Read The Doc
 
 ### 简介
