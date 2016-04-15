@@ -72,7 +72,7 @@ def create_meibo_menu(request):
             }
         ]
     }
-    whole_menu_dic = {
+    whole_menu_dics = {
         "button": [
             {
                 "type": "click",
