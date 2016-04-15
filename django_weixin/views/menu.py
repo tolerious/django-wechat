@@ -28,7 +28,11 @@ def create_basic_menu(request):
         menu_2_list = data['menu_2']
         menu_3_list = data['menu_3']
         if menu_1_list[0]['menu_type'] == "click" or menu_1_list[0]['menu_type'] == "view" or menu_1_list[0]['menu_type'] == "0":  # 说明是没有子菜单的
-            logging.info("........")
+            if menu_1_list[0]['menu_type'] == '0':
+                pass
+            else:
+                if menu_1_list[0]['menu_type'] == 'click':
+                    pass
         if menu_2_list[0]['menu_type'] == "click" or menu_2_list[0]['menu_type'] == "view" or menu_2_list[0]['menu_type'] == "0":  # 说明是没有子菜单的
             pass
         if menu_3_list[0]['menu_type'] == "click" or menu_3_list[0]['menu_type'] == "view" or menu_3_list[0]['menu_type'] == "0":  # 说明是没有子菜单的
