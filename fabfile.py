@@ -20,9 +20,9 @@ def m(b="master", c=" 我们都是好孩子. "):
         local("git commit -am '  %s ;'&&git push origin %s" % (c, b))
         local("mkdir -p packages/django_weixin")
         local("cp -R django_weixin packages/django_weixin")
-        local("cd packages/django_weixin/dist/ && rm *")
-        local("cd packages/django_weixin && python setup.py sdist")
-        local("cd packages/django_weixin && twine upload dist/*")
+        # local("cd packages/django_weixin/dist/ && rm *")
+        # local("cd packages/django_weixin && python setup.py sdist")
+        # local("cd packages/django_weixin && twine upload dist/*")
     with cd("/home/tolerious/wechat_env/django-wechat"):
         run("git stash")
         commend = "git ck %s" % b
