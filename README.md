@@ -7,6 +7,29 @@
 ![Alt text](http://badge.kloud51.com/pypi/f/django-weixin.svg)
 <!-- ![Alt text](http://badge.kloud51.com/pypi/w/django-wechat.svg) -->
 <!-- ![Alt text](http://badge.kloud51.com/pypi/e/django-wechat.svg) -->
+
+### 微信公众号Django版本
+项目主页: https://github.com/tolerious/django-wechat
+详尽的项目文档: Read The Doc
+
+### 简介
+项目的宗旨是封装微信公众号的API,从而方便开发这快速进行微信公众号的开发,您可以直接使用本项目进行基于Django的公众号开发,
+同时您也可以把TA当作一个普通的python软件包通过`pip install django-weixin`进行安装.
+
+### 功能
+* 验证成为开发者
+* 自动回复微信号关注者消息
+* 创建自定义菜单
+* 未完待续...
+
+### 问题与Bug
+可以通过Github上的Issue进行Bug的提交与问题的讨论.
+
+### License
+Copyright &copy; 2016 Helong Feng.
+MIT licensed.
+
+
 ### 微信公众号Django版本
 
 请根据需要修改wechat.ini中的内容,一般是可以选择单跑uwsgi或者是nginx+uwsgi滴,当然，你也可以另类些，只跑django，LOL.....uwsgi跟nginx的相关配置可以参考`uwsgi+nginx`配置一节
