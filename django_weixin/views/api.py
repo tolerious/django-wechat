@@ -25,13 +25,13 @@ def create_meibo_menu(request):
                 "sub_button": [
                     {
                         "type": "view",
-                        "name": "我的订单",
-                        "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73cedfdd4ac51d80&redirect_uri=http%3a%2f%2fwx.meiparking.com%2fwechat%2forder%2flist%3fcurrent%3d1&response_type=code&scope=snsapi_base#wechat_redirect"
+                        "name": "预约服务",
+                        "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73cedfdd4ac51d80&redirect_uri=http%3a%2f%2fwx.meiparking.com%2fwechat%2freserve%2fpark%2f&response_type=code&scope=snsapi_base#wechat_redirect"
                     },
                     {
                         "type": "view",
-                        "name": "预约服务",
-                        "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73cedfdd4ac51d80&redirect_uri=http%3a%2f%2fwx.meiparking.com%2fwechat%2freserve%2fpark%2f&response_type=code&scope=snsapi_base#wechat_redirect"
+                        "name": "我的订单",
+                        "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73cedfdd4ac51d80&redirect_uri=http%3a%2f%2fwx.meiparking.com%2fwechat%2forder%2flist%3fcurrent%3d1&response_type=code&scope=snsapi_base#wechat_redirect"
                     }
                 ]
             },
