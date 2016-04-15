@@ -19,7 +19,7 @@ import logging, json
 def create_menu_admin(request):
     return render(request, 'menu_config.html')
 
-@csrf_exempt
+# @csrf_exempt
 def create_basic_menu(request):
     if request.method == "POST":
         data = json.loads(request.body)
