@@ -76,7 +76,7 @@ def create_meibo_menu(request):
      "button":[
      {
           "type":"click",
-          "name":u"asdf",
+          "name":u"你好",
           "key":"V1001_TODAY_MUSIC"
       },
       {
@@ -104,7 +104,7 @@ def create_meibo_menu(request):
     url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + token
     payload = whole_menu_dic
     logging.info(payload)
-    r = requests.post(url, data=json.dumps(payload))
+    r = requests.post(url, data=payload)
     logging.info(r.text)
     logging.info(r.json())
     return Http200(request)
