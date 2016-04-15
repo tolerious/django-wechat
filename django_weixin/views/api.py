@@ -72,6 +72,33 @@ def create_meibo_menu(request):
             }
         ]
     }
+    whole_menu_dic =  {
+     "button":[
+     {
+          "type":"click",
+          "name":"今日歌曲",
+          "key":"V1001_TODAY_MUSIC"
+      },
+      {
+           "name":"菜单",
+           "sub_button":[
+           {
+               "type":"view",
+               "name":"搜索",
+               "url":"http://www.soso.com/"
+            },
+            {
+               "type":"view",
+               "name":"视频",
+               "url":"http://v.qq.com/"
+            },
+            {
+               "type":"click",
+               "name":"赞一下我们",
+               "key":"V1001_GOOD"
+            }]
+       }]
+ }
     token_obj = AccessToken.objects.get(pk=1)
     token = token_obj.get_access_token()
     url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + token
