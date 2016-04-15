@@ -2,6 +2,7 @@
  * Created by fengxiaolong on 16/4/15.
  */
 $().ready(function () {
+    var post_data = "";
     $("#create-meibo-menu").click(function(){
         $.ajax({
             url: '/django-weixin/api/create/menu/',
