@@ -76,25 +76,25 @@ def create_meibo_menu(request):
      "button":[
      {
           "type":"click",
-          "name":u"今日歌曲",
+          "name":u"asdf",
           "key":"V1001_TODAY_MUSIC"
       },
       {
-           "name":u"菜单",
+           "name":u"asdf",
            "sub_button":[
            {
                "type":"view",
-               "name":u"搜索",
+               "name":u"sdf",
                "url":"http://www.soso.com/"
             },
             {
                "type":"view",
-               "name":u"视频",
+               "name":u"asdf",
                "url":"http://v.qq.com/"
             },
             {
                "type":"click",
-               "name":u"赞一下我们",
+               "name":u"asdf",
                "key":"V1001_GOOD"
             }]
        }]
