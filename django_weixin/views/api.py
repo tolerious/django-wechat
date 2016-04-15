@@ -81,6 +81,7 @@ def create_meibo_menu(request):
     logging.info(r.json())
     return_data = r.json()
     if return_data['errmsg'] == "ok":
+        logging.info("菜单创建成功.")
         return Http200(request)
     else:
         return Http400(request)
@@ -94,6 +95,7 @@ def delete_menu(request):
     r = requests.get(url)
     logging.info(r.json())
     if r.json()['errmsg'] == "ok":
+        logging.info("菜单删除成功.")
         return Http200(request)
     else:
         return Http400(request)
