@@ -27,7 +27,7 @@ def create_basic_menu(request):
         menu_1_list = data['menu_1']
         menu_2_list = data['menu_2']
         menu_3_list = data['menu_3']
-        if menu_1_list[0]['menu_type'] == 0:
+        if menu_1_list[0]['menu_type'] == "click":
             pass
         return Http200(request)
     else:
