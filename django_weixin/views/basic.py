@@ -86,8 +86,11 @@ def index(request):
         return Http200(request)
 
 
-def accesstoken(request):
-    new_token = AccessToken.objects.get(pk=1)
+def get_access_token_view(request):
+    new_token = AccessToken()
     token = new_token.get_access_token()
     logging.info(token)
-    return HttpResponse(token)
+    context_data = {
+        'access_token': token
+    }
+    return render(request, 'get_access_token.html', context_data)

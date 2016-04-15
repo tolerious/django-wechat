@@ -16,4 +16,3 @@ from django_weixin.api_errors import *
 import logging, json
 
 
-
