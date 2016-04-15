@@ -92,6 +92,7 @@ def delete_menu(request):
     token = token_obj.get_access_token()
     url = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=" + token
     r = requests.get(url)
+    logging.info(r.json())
     if r.json()['errmsg'] == "ok":
         return Http200(request)
     else:
