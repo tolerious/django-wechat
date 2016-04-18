@@ -5,12 +5,14 @@
 ![Alt text](http://badge.kloud51.com/pypi/s/django-weixin.svg)
 ![Alt text](http://badge.kloud51.com/pypi/l/django-weixin.svg)
 ![Alt text](http://badge.kloud51.com/pypi/f/django-weixin.svg)
+![Alt text](https://readthedocs.org/projects/django-weixin/badge/?version=latest)
 <!-- ![Alt text](http://badge.kloud51.com/pypi/w/django-wechat.svg) -->
 <!-- ![Alt text](http://badge.kloud51.com/pypi/e/django-wechat.svg) -->
 
 ### 微信公众号Django版本
 项目主页: https://github.com/tolerious/django-wechat  <br>
 详尽的项目文档: Read The Doc
+![Alt text](https://readthedocs.org/projects/django-weixin/badge/?version=latest)
 
 ### 简介
 项目的宗旨是封装微信公众号的API,从而方便开发这快速进行微信公众号的开发,您可以直接使用本项目进行基于Django的公众号开发,
