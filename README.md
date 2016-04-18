@@ -11,7 +11,7 @@
 
 ### 微信公众号Django版本
 ![Alt text](https://readthedocs.org/projects/django-weixin/badge/?version=latest)</br>
-项目主页: https://github.com/tolerious/django-wechat  <br>
+项目主页: https://github.com/tolerious/django-wechat  </br>
 详尽的项目文档: [Read The Doc](http://django-weixin.readthedocs.org/zh_CN/latest/)
 
 ### 简介
