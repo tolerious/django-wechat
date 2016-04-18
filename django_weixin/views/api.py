@@ -58,25 +58,25 @@ def create_meibo_menu(request):
             {
                 "name": "更多",
                 "sub_button": [
-                    {
-                        "type": "view",
-                        "name": "操作流程",
-                        "url": "http://a.app.qq.com/o/simple.jsp?pkgname=com.meiparking.meiparkingclient"
-                    },
-                    {
-                        "type": "view",
-                        "name": "操作流程",
-                        "url": "http://a.app.qq.com/o/simple.jsp?pkgname=com.meiparking.meiparkingclient"
-                    },
+                    # {
+                    #     "type": "view",
+                    #     "name": "操作流程",
+                    #     "url": "http://a.app.qq.com/o/simple.jsp?pkgname=com.meiparking.meiparkingclient"
+                    # },
+                    # {
+                    #     "type": "view",
+                    #     "name": "操作流程",
+                    #     "url": "http://a.app.qq.com/o/simple.jsp?pkgname=com.meiparking.meiparkingclient"
+                    # },
                     {
                         "type": "scancode_waitmsg",
-                        "name": "扫码带提示",
+                        "name": "扫码显示",
                         "key": "myscancode",
                         "sub_button": []
                     },
                     {
                         "type": "scancode_push",
-                        "name": "扫码推事件",
+                        "name": "扫码跳转",
                         "key": "myscancodepush",
                         "sub_button": []
                     }
