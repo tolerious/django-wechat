@@ -67,6 +67,18 @@ def create_meibo_menu(request):
                         "type": "view",
                         "name": "操作流程",
                         "url": "http://a.app.qq.com/o/simple.jsp?pkgname=com.meiparking.meiparkingclient"
+                    },
+                    {
+                        "type": "scancode_waiting",
+                        "name": "扫码带提示",
+                        "key": "myscancode",
+                        "sub_button": []
+                    },
+                    {
+                        "type": "scancode_push",
+                        "name": "扫码推事件",
+                        "key": "myscancodepush",
+                        "sub_button": []
                     }
                 ]
             }
