@@ -12,7 +12,7 @@
 ### 微信公众号Django版本
 ![Alt text](https://readthedocs.org/projects/django-weixin/badge/?version=latest)</br>
 项目主页: https://github.com/tolerious/django-wechat  <br>
-详尽的项目文档: Read The Doc
+详尽的项目文档: [Read The Doc](http://django-weixin.readthedocs.org/zh_CN/latest/)
 
 ### 简介
 项目的宗旨是封装微信公众号的API,从而方便开发这快速进行微信公众号的开发,您可以直接使用本项目进行基于Django的公众号开发,
