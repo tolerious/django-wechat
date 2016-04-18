@@ -61,7 +61,7 @@ def index(request):
         logging.info(create_time)
         if message_type == "event":  # 检测是不是event类型的消息
             event = get_xml_text_by_property(request.body, "Event")  # 获取event的类型
-            if event == "scancode_waitmsg":
+            if event == "scancode_waitmsg":  # 扫码但是不跳转的事件
                 message_content = origin_message_content
 
         logging.info("............................POST")
