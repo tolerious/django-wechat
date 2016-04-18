@@ -54,7 +54,9 @@ def index(request):
         message_type = get_xml_text_by_property(request.body, "MsgType")
         create_time = get_xml_text_by_property(request.body, "CreateTime")
         message_content = get_xml_text_by_property(request.body, "Content")
-        message_content = u"你个逗比."
+        message_content_list = [u"你个逗比", u"今天我要嫁给你", u"郭峻岭就是大肥", u"美好的一天开始了", u"让我们尽情骚动吧", u"让你回复,你特么还真回复啊!",
+                                u"不要走,决战到天亮"]
+        message_content = message_content_list[0, random.randint(len(message_content_list)) - 1]
         logging.info(to_user_name)
         logging.info(create_time)
         logging.info("............................POST")
@@ -97,5 +99,6 @@ def get_access_token_view(request):
     }
     return render(request, 'get_access_token.html', context_data)
 
+
 def admin_dashboard(request):
-    return render(request,'admin-dashboard.html')
+    return render(request, 'admin-dashboard.html')
