@@ -167,3 +167,11 @@ class MenuEvent(BasicEvent):
 
     def __unicode__(self):
         pass  # todo
+
+
+class MessageAutoReplay(models.Model):
+    content = models.CharField(max_length=500, default="")
+    create_time = models.DateTimeField(default=datetime.datetime.now, auto_now=datetime.datetime.now)
+
+    def __unicode__(self):
+        return self.content + "\n"
