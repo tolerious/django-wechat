@@ -79,7 +79,13 @@ def create_meibo_menu(request):
                         "name": "扫码跳转",
                         "key": "myscancodepush",
                         "sub_button": []
-                    }
+                    },
+                    {
+                        "type": "pic_photo_or_album",
+                        "name": "拍照",
+                        "key": "rselfmenu_1_1",
+                        "sub_button": []
+                    },
                 ]
             }
         ]
