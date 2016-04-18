@@ -53,12 +53,17 @@ def index(request):
         from_user_name = get_xml_text_by_property(request.body, "FromUserName")
         message_type = get_xml_text_by_property(request.body, "MsgType")
         create_time = get_xml_text_by_property(request.body, "CreateTime")
-        message_content = get_xml_text_by_property(request.body, "Content")
-        message_content_list = [u"你个逗比", u"今天我要嫁给你", u"郭峻岭就是大肥", u"美好的一天开始了", u"让我们尽情骚动吧", u"让你回复,你特么还真回复啊!",
+        origin_message_content = get_xml_text_by_property(request.body, "Content")
+        message_content_list = [u"你个逗比", u"今天我要嫁给你", u"郭峻岭就是大肥", u"美好的一天开始了", u"让我们尽情骚动吧", u"让你回复,你还真特么回复啊!",
                                 u"不要走,决战到天亮"]
         message_content = message_content_list[random.randint(0, len(message_content_list)) - 1]
         logging.info(to_user_name)
         logging.info(create_time)
+        if message_type == "event":  # 检测是不是event类型的消息
+            event = get_xml_text_by_property(request.body, "Event")  # 获取event的类型
+            if event == "scancode_waitmsg":
+                message_content = origin_message_content
+
         logging.info("............................POST")
         # root_element = et.Element('xml')
         # to_user_name_element = et.SubElement(root_element,'ToUserName')
