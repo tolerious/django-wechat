@@ -115,7 +115,7 @@ LOGGING = {
         'level': 'DEBUG',
     },
 }
-
+APP_URL = "localhost"
 APP_ID = "wx73cedfdd4ac51d80"
 APP_SECRET = "c3733fd7005584fbaaf8e93264062bb6"
 API_KEY = "meiparking4106211993022345770000"

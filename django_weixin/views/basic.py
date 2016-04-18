@@ -107,4 +107,8 @@ def get_access_token_view(request):
 
 
 def admin_dashboard(request):
-    return render(request, 'admin-dashboard.html')
+    access_token_url = settings.APP_URL + "/django-weixin/access/token/get/"
+    context_data = {
+        "access_token_url": access_token_url
+    }
+    return render(request, 'admin-dashboard.html', context_data)
