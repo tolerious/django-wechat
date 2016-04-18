@@ -54,6 +54,7 @@ def index(request):
         message_type = get_xml_text_by_property(request.body, "MsgType")
         create_time = get_xml_text_by_property(request.body, "CreateTime")
         message_content = get_xml_text_by_property(request.body, "Content")
+        message_content = u"你个逗比."
         logging.info(to_user_name)
         logging.info(create_time)
         logging.info("............................POST")
