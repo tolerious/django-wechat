@@ -49,6 +49,7 @@ def index(request):
         # todo : judge if the message is valid
         # logging.info(request.REQUEST['signature'])
         logging.info(request.body)
+        logging.info("\n\n")
         to_user_name = get_xml_text_by_property(request.body, "ToUserName")
         from_user_name = get_xml_text_by_property(request.body, "FromUserName")
         message_type = get_xml_text_by_property(request.body, "MsgType")
@@ -57,8 +58,8 @@ def index(request):
         message_content_list = [u"你个逗比", u"今天我要嫁给你", u"郭峻岭就是大肥", u"美好的一天开始了", u"让我们尽情骚动吧", u"让你回复,你还真特么回复啊!",
                                 u"不要走,决战到天亮"]
         message_content = message_content_list[random.randint(0, len(message_content_list)) - 1]
-        logging.info(to_user_name)
-        logging.info(create_time)
+        # logging.info(to_user_name)
+        # logging.info(create_time)
         logging.info(message_type)
         if message_type == "event":  # 检测是不是event类型的消息
             event = get_xml_text_by_property(request.body, "Event")  # 获取event的类型
