@@ -67,7 +67,6 @@ def index(request):
                 message_content = get_xml_text_by_property(request.body, "ScanResult")
             if event == "LOCATION":
                 message_content = ""
-        logging.info("............................POST")
         # root_element = et.Element('xml')
         # to_user_name_element = et.SubElement(root_element,'ToUserName')
         # to_user_name_element.text = '<![CDATA[' + to_user_name + ']]>'
@@ -84,6 +83,7 @@ def index(request):
         xml_return_string = TextMessage.TextMessageTemplate.format(toUser=from_user_name, fromUser=to_user_name,
                                                                    create_time=create_time,
                                                                    message_content=message_content)
+        logging.info("\n\n")
         logging.info(xml_return_string)
         file_object = open("text_message.xml", 'w')
         file_object.write(xml_return_string)
