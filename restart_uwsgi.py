@@ -24,14 +24,14 @@ def restart_uwsgi_process(filename):
         ps_string = "ps -ef | grep " + filename
         status_0, output_0 = commands.getstatusoutput(ps_string)
         # print output_0
-        out_put_list = output_0.split(" ")
+        out_put_list = output_0.strip(" ").split(" ")
         # print out_put_list
         uwsgi_pid = out_put_list[1]
         print uwsgi_pid
         kill_str = 'kill -9 ' + uwsgi_pid
         status_1, output_1 = commands.getstatusoutput(kill_str)
         if status_1 != 0:
-            out_put_list_backup = output_0.split("  ")
+            out_put_list_backup = output_0.strip(" ").split("  ")
             uwsgi_pid_backup = out_put_list_backup[1]
             print uwsgi_pid_backup
             kill_str_back = 'kill -9 ' + uwsgi_pid_backup
