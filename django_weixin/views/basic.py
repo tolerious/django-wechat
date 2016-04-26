@@ -65,7 +65,8 @@ def index(request):
             event = get_xml_text_by_property(request.body, "Event")  # 获取event的类型
             if event == "scancode_waitmsg":  # 扫码但是不跳转的事件
                 message_content = get_xml_text_by_property(request.body, "ScanResult")
-
+            if event == "LOCATION":
+                message_content = ""
         logging.info("............................POST")
         # root_element = et.Element('xml')
         # to_user_name_element = et.SubElement(root_element,'ToUserName')
