@@ -50,6 +50,7 @@ def get_follower_info():
     url = """https://api.weixin.qq.com/cgi-bin/user/get?access_token={access_token}&next_openid=NEXT_OPENID"""
     a = AccessToken.objects.get(pk=1)
     access_token = a.get_access_token()
+    print access_token
     new_url = url.format(access_token=access_token)
     print new_url
     r = requests.get(new_url)
