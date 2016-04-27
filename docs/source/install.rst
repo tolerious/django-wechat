@@ -10,7 +10,7 @@
 
 - pip install django-weixin
 
-- 复制
+- 复制 *settings_eg.py* 为 *settings.py*
 
 - 在你的 *settings.py* 文件的 *INSTALLED_APPS* 中添加*django_weixin*
 
