@@ -6,3 +6,4 @@
 ============
 
 
+- pip install django-weixin
