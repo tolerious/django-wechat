@@ -47,10 +47,9 @@ def generate_create_base_menu_button_json():  # 生成基础功能的button,clic
 
 def get_follower_info():
     from django_weixin.models.basic import *
-    url = """https://api.weixin.qq.com/cgi-bin/user/get?access_token={access_token}&next_openid=NEXT_OPENID"""
+    url = """https://api.weixin.qq.com/cgi-bin/user/get?access_token={access_token}&next_openid="""
     a = AccessToken.objects.get(pk=1)
     access_token = a.get_access_token()
-    print access_token
     new_url = url.format(access_token=access_token)
     print new_url
     r = requests.get(new_url)
