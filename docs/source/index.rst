@@ -11,7 +11,12 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   install
    basic
+
+
+
+
 
 Indices and tables
 ==================
