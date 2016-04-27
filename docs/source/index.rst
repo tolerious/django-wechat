@@ -18,7 +18,7 @@ Contents:
 
 
 
-Indices and tables
+索引与附录
 ==================
 
 * :ref:`genindex`
