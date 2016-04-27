@@ -8,7 +8,7 @@ Created on 04 08, 2016
 import datetime,requests,json
 import json, xml.etree.ElementTree as et
 from django_weixin.WXBizMsgCrypt import *
-from django_weixin.models.basic import *
+from django_weixin.models.basic import AccessToken
 
 def python_time_to_javascript(python_datetime):
     if python_datetime is not None:

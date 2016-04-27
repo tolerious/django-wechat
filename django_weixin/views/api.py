@@ -117,4 +117,3 @@ def delete_menu(request):
         return Http200(request)
     else:
         return Http400(request)
-
