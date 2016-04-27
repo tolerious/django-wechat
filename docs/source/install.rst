@@ -19,4 +19,4 @@
 
 - 复制 *settings_eg.py* 为 *settings.py*
 
-- 在 *settings.py* 文件中修改 ``APP_ID`` , ``APP_SECRET`` , ``AES_KEY`` , ``WX_TOKEN`` 为你自己的公众号的信息
+- 在 *settings.py* 文件中将 ``APP_ID`` , ``APP_SECRET`` , ``AES_KEY`` , ``WX_TOKEN`` 修改为你自己公众号的信息
