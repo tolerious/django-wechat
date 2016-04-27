@@ -116,10 +116,9 @@ LOGGING = {
     },
 }
 APP_URL = "http://chat.meiparking.com"
-APP_ID = "wx73cedfdd4ac51d80"
-APP_SECRET = "c3733fd7005584fbaaf8e93264062bb6"
-API_KEY = "meiparking4106211993022345770000"
-AES_KEY = "MIKLgzELMbnortUEmlf8z21y1P91ndC8JF5OULcJymv"
+APP_ID = "wfelkjlsjdlf"
+APP_SECRET = "sdfjljwlkejlkksdf"
+AES_KEY = "klsdjfkljlksdf"
 WX_TOKEN = "tolerious"
-MARKET_NUMBER = "1279299701"
+MARKET_NUMBER = "123123123"
 
