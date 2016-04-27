@@ -8,7 +8,6 @@ Created on 04 08, 2016
 import datetime,requests,json
 import json, xml.etree.ElementTree as et
 from django_weixin.WXBizMsgCrypt import *
-from django_weixin.models.basic import AccessToken
 
 def python_time_to_javascript(python_datetime):
     if python_datetime is not None:
@@ -44,6 +43,7 @@ def generate_create_base_menu_button_json():  #生成基础功能的button,click
     return base_json
 
 def get_follower_info():
+    from django_weixin.models.basic import *
     url = "https://api.weixin.qq.com/cgi-bin/user/get?access_token={{access_token}}&next_openid=NEXT_OPENID"
     a = AccessToken.objects.get(pk=1)
     access_token = a.get_access_token()
