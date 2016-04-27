@@ -53,4 +53,16 @@ def get_follower_info():
     new_url = url.format(access_token=access_token)
     print new_url
     r = requests.get(new_url)
+    json_return = r.json()
     print r.json()
+    total_user_count = json_return['total']
+    a_count_first = total_user_count / 1000
+    if total_user_count > 1000:
+        if a_count_first % 1000 == 0:
+            final_count = a_count_first
+        else:
+            final_count = a_count_first + 1
+        for i in range(0, final_count):
+            pass
+    else:
+        return json_return
