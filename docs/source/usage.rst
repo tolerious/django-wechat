@@ -17,7 +17,7 @@
    a = AccessToken()
    a.save()
 
-在代码中需要得到AccessToken的地方写上如下代码:
+在代码中需要得到AccessToken的地方调用如下代码即可:
 
 .. code-block:: python
    :linenos:
