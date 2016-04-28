@@ -25,3 +25,15 @@
    from django_weixin.models import *
    a = AccessToken.objects.get(pk=1)
    access_token = a.get_access_token()
+
+获取微信服务器列表
+-------------------------
+
+引用一下代码实现获取微信服务器列表.
+
+.. code-block:: python
+    :linenos:
+
+    from django_weixin.models import *
+    w = WeChatServer()
+    server_ip_list = w.get_wechat_server_ip_list()
