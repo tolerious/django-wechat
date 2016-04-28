@@ -79,7 +79,7 @@ def get_temp_qr_code():
         'action_name': "QR_SCENE",
         'action_info': {
             "scene": {
-                "scene_id": 'tolerious'
+                "scene_id": 123
             }
         }
     }
