@@ -83,5 +83,5 @@ def get_temp_qr_code():
             }
         }
     }
-    r = requests.post(url,data=payload)
+    r = requests.post(url,data=json.dumps(payload))
     print r.json()
