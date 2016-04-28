@@ -4,7 +4,6 @@ Created on 03 19, 2015
 @author: tolerious
 
 '''
-from django_weixin.models.basic import *
 from django.db import models
 import requests, logging
 
@@ -12,6 +11,7 @@ class WeChatServer(models.Model):
     server_ip_list = models.CharField(default="",blank=True,max_length=1000)
 
     def get_wechat_server_ip_list(self):
+        from django_weixin.models.basic import *
         access_token = AccessToken.objects.get(id=1)
         token = access_token.get_access_token()
         url = "https://qyapi.weixin.qq.com/cgi-bin/getcallbackip?access_token=" + token
