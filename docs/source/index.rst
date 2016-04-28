@@ -12,8 +12,10 @@ Contents:
    :maxdepth: 2
 
    install
+   uwsgi
    basic
    usage
+
 
 
 
