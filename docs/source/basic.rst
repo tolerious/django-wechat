@@ -9,5 +9,5 @@
 
 在微信公众号后台填写相应的信息,如图所示,
 
-.. image:: http://ww2.sinaimg.cn/mw690/a036a21ajw1f2gfmfwrqyj20hs0vkgns.jpg
+.. image:: http://ww1.sinaimg.cn/mw690/a036a21agw1f2st9l46wsj216c11mjwp.jpg
 
