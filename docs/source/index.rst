@@ -13,6 +13,7 @@ Contents:
 
    install
    basic
+   usage
 
 
 
