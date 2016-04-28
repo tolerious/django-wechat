@@ -14,7 +14,7 @@ class WeChatServer(models.Model):
         from django_weixin.models.basic import *
         access_token = AccessToken.objects.get(id=1)
         token = access_token.get_access_token()
-        url = "https://qyapi.weixin.qq.com/cgi-bin/getcallbackip?access_token=" + token
+        url = "https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token=" + token
         r = requests.get(url, verify=False)
         try:
             ip_list = r.json()['ip_list']
