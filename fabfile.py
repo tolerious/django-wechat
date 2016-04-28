@@ -14,6 +14,7 @@ env.roledefs = {
 }
 
 
+
 def m(b="master", c=" 我们都是好孩子. "):
     with settings(warn_only=True):
         local("source ../bin/activate && python manage.py collectstatic --noinput")
