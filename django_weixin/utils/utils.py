@@ -73,6 +73,7 @@ def get_temp_qr_code():
     a = AccessToken.objects.get(pk=1)
     access_token = a.get_access_token()
     url = "https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=" + access_token
+    print url
     payload = {
         'expire_seconds': 2592000,
         'action_name': "QR_SCENE",
