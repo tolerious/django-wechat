@@ -13,6 +13,7 @@ Contents:
 
    install
    uwsgi
+   nginx
    basic
    usage
 
