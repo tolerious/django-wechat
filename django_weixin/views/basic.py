@@ -102,8 +102,11 @@ def get_access_token_view(request):
     new_token = AccessToken.objects.get(pk=1)
     token = new_token.get_access_token()
     logging.info(token)
+    from django_weixin.utils.utils import get_temp_qr_code
+    ticket = get_temp_qr_code()
     context_data = {
-        'access_token': token
+        'access_token': token,
+        'ticket': ticket
     }
     return render(request, 'get_access_token.html', context_data)
 
