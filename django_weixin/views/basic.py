@@ -102,11 +102,8 @@ def get_access_token_view(request):
     new_token = AccessToken.objects.get(pk=1)
     token = new_token.get_access_token()
     logging.info(token)
-    from django_weixin.utils.utils import get_temp_qr_code
-    ticket = get_temp_qr_code()
     context_data = {
         'access_token': token,
-        'ticket': ticket
     }
     return render(request, 'get_access_token.html', context_data)
 
@@ -117,3 +114,12 @@ def admin_dashboard(request):
         "access_token_url": access_token_url
     }
     return render(request, 'admin-dashboard.html', context_data)
+
+
+def get_qr_code_ticket(request):
+    from django_weixin.utils.utils import get_temp_qr_code
+    ticket = get_temp_qr_code()
+    context_data = {
+        'ticket': ticket
+    }
+    return render(request, 'ticket.html', context_data)
