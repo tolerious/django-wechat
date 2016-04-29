@@ -85,7 +85,7 @@ def get_temp_qr_code():
     }
     r = requests.post(url, data=json.dumps(payload))
     data_return = r.json()
-    logging.info(r.json())
+    # logging.info(r.json())
     try:
         ticket = data_return['ticket']
     except Exception as e:
