@@ -90,7 +90,7 @@ def get_temp_qr_code():
         ticket = data_return['ticket']
     except Exception as e:
         ticket = ""
-    return ticket
+    return "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + ticket
 
 
 def get_pergmanent_qr_code():
@@ -115,4 +115,4 @@ def get_pergmanent_qr_code():
         ticket = data_return['ticket']
     except Exception as e:
         ticket = ""
-    return ticket
+    return "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + ticket
