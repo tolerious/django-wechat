@@ -120,8 +120,10 @@ def admin_dashboard(request):
 
 def get_qr_code_ticket(request):
     from django_weixin.utils.utils import get_temp_qr_code
-    ticket = get_temp_qr_code()
+    temp = get_temp_qr_code()
+    pergmanent = get_pergmanent_qr_code()
     context_data = {
-        'ticket': ticket
+        'temp': temp,
+        'permanent': pergmanent
     }
     return render(request, 'ticket.html', context_data)

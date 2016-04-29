@@ -3,8 +3,22 @@
     Ticket
 {% endblock %}
 {% block body %}
-    <div class="qr-code-ticket">
-        {{ ticket }}
+    <div class="ul-container">
+    <ul class="li-continer">
+        <li><a href="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket={{ temp }}">30天有效二维码获取</a></li>
+        <li><a href="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket={{ permanent }}">永久有效二维码获取</a></li>
+    </ul>
     </div>
+    <style>
+    .ul-container {
+        text-align: center;
+    }
+    .li-continer {
+        list-style: none;
+    }
+    .li-continer > li {
+        margin: 10px auto auto auto;
+    }
+    </style>
 {% endblock %}
 

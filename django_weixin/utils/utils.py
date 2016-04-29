@@ -95,4 +95,25 @@ def get_temp_qr_code():
 
 
 def get_pergmanent_qr_code():
-    pass
+    from django_weixin.models.basic import *
+    a = AccessToken.objects.get(pk=1)
+    access_token = a.get_access_token()
+    url = "https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=" + access_token
+    print url
+    payload = {
+        'expire_seconds': 2592000,
+        'action_name': "QR_LIMIT_STR_SCENE",
+        'action_info': {
+            "scene": {
+                "scene_id": 123
+            }
+        }
+    }
+    r = requests.post(url, data=json.dumps(payload))
+    data_return = r.json()
+    print r.json()
+    try:
+        ticket = data_return['ticket']
+    except Exception as e:
+        ticket = ""
+    return ticket
