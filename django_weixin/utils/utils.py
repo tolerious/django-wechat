@@ -101,7 +101,7 @@ def get_pergmanent_qr_code():
     print url
     payload = {
         'expire_seconds': 2592000,
-        'action_name': "QR_LIMIT_STR_SCENE",
+        'action_name': "QR_LIMIT_SCENE",
         'action_info': {
             "scene": {
                 "scene_id": 123
