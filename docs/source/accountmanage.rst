@@ -14,6 +14,12 @@
 
     from django_weixin.utils.utils import *
     temp_url = get_temp_qr_code()
+
+
+生成永久有效的二维码
+-----------------------------------
+
+.. code-block:: python
+
+    from django_weixin.utils.utils import *
     pergmanent_url = get_pergmanent_qr_code()
-
-
