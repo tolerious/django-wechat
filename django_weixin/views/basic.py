@@ -110,8 +110,10 @@ def get_access_token_view(request):
 
 def admin_dashboard(request):
     access_token_url = settings.APP_URL + "/django-weixin/access/token/get/"
+    qr_code_ticket = settings.APP_URL + "/django-weixin/show/ticket/"
     context_data = {
-        "access_token_url": access_token_url
+        "access_token_url": access_token_url,
+        "qr_code_ticket": qr_code_ticket
     }
     return render(request, 'admin-dashboard.html', context_data)
 
