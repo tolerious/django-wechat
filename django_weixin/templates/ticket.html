@@ -2,6 +2,9 @@
 {% block title %}
     Ticket
 {% endblock %}
-<div class="qr-code-ticket">
-    {{ ticket }}
-</div>
+{% block body %}
+    <div class="qr-code-ticket">
+        {{ ticket }}
+    </div>
+{% endblock %}
+
