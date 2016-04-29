@@ -5,7 +5,7 @@ Created on 04 08, 2016
 @author: tolerious
 
 '''
-import datetime, requests, json
+import datetime, requests, json, logging
 import json, xml.etree.ElementTree as et
 from django_weixin.WXBizMsgCrypt import *
 
@@ -85,13 +85,12 @@ def get_temp_qr_code():
     }
     r = requests.post(url, data=json.dumps(payload))
     data_return = r.json()
-    print r.json()
+    logging.info(r.json())
     try:
         ticket = data_return['ticket']
     except Exception as e:
         ticket = ""
     return ticket
-
 
 
 def get_pergmanent_qr_code():
@@ -111,7 +110,7 @@ def get_pergmanent_qr_code():
     }
     r = requests.post(url, data=json.dumps(payload))
     data_return = r.json()
-    print r.json()
+    logging.info(r.json())
     try:
         ticket = data_return['ticket']
     except Exception as e:
