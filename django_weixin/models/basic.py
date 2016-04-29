@@ -77,6 +77,21 @@ class TextMessage(BasicMessage):
         return "[message type]:" + self.message_type + "; [message content]:" + self.message_content
 
 
+class KeFuMessage(BasicMessage):
+    KeFuMessageTemplate = u"""<xml>
+<ToUserName><![CDATA[{toUser}]]></ToUserName>
+<FromUserName><![CDATA[{fromUser}]]></FromUserName>
+<CreateTime>{create_time}</CreateTime>
+<MsgType><![CDATA[transfer_customer_service]]></MsgType>
+<Content><![CDATA[{message_content}]]></Content>
+</xml>
+    """
+    message_content = models.TextField(default="")
+
+    def __unicode__(self):
+        return "[message type]:" + self.message_type + "; [message content]:" + self.message_content
+
+
 class PicMessage(BasicMessage):
     pic_url = models.CharField(default="", max_length=1000)
     media_id = models.CharField(default="", max_length=1000)

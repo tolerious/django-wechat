@@ -80,7 +80,11 @@ def index(request):
         # content_element.text = '<![CDATA[' + "Hello" + ']]>'
         # xml_return_string = et.tostring(root_element)
         # logging.info(xml_return_string)
-        xml_return_string = TextMessage.TextMessageTemplate.format(toUser=from_user_name, fromUser=to_user_name,
+
+        # xml_return_string = TextMessage.TextMessageTemplate.format(toUser=from_user_name, fromUser=to_user_name,
+        #                                                            create_time=create_time,
+        #                                                            message_content=message_content)
+        xml_return_string = KeFuMessage.KeFuMessageTemplate.format(toUser=from_user_name, fromUser=to_user_name,
                                                                    create_time=create_time,
                                                                    message_content=message_content)
         logging.info("\n\n")
