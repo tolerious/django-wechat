@@ -90,8 +90,9 @@ def get_temp_qr_code():
         ticket = data_return['ticket']
     except Exception as e:
         ticket = ""
+    return ticket
 
-    
+
 
 def get_pergmanent_qr_code():
     pass
