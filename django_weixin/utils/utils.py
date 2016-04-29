@@ -116,3 +116,18 @@ def get_pergmanent_qr_code():
     except Exception as e:
         ticket = ""
     return "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + ticket
+
+
+def long_url_to_short(long_url):
+    from django_weixin.models import *
+    a = AccessToken()
+    access_token = a.get_access_token()
+    url = "https://api.weixin.qq.com/cgi-bin/shorturl?access_token=" + access_token
+    payload = {
+        "access_token": access_token,
+        "action": "long2short",
+        "long_url": long_url
+    }
+    r = requests.post(url,data=json.dumps(payload))
+    json_return = r.json()
+    print json_return
