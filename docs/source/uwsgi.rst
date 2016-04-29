@@ -26,3 +26,5 @@
     threads = 5
     enable-threads = true
     plugins = python
+
+配置uwsgi仅针对直接clone本项目进行开发的需求,如果使用 `pip` 进行安装的使用者可以忽略此部分配置
