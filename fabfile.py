@@ -9,13 +9,12 @@ Created on 04 07, 2016
 from fabric.api import *
 
 env.roledefs = {
-    'p': ['meibo@service.meiparking.com'],
     't': ['tolerious@wx.meiparking.com']
 }
 
 
 
-def m(b="master", c=" 我们都是好孩子. "):
+def m(b="master", c=" "):
     with settings(warn_only=True):
         local("source ~/.zshrc&&source ../bin/activate && python manage.py collectstatic --noinput")
         local("git commit -am '  %s ;'&&git push origin %s" % (c, b))
