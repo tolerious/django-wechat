@@ -31,7 +31,7 @@
 可以通过Github上的Issue进行Bug的提交与问题的讨论.
 
 ### License
-Copyright &copy; 2016 Helong Feng.
+Copyright &copy; 2016 tolerious.
 MIT licensed.
 
 
