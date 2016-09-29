@@ -13,7 +13,6 @@ env.roledefs = {
 }
 
 
-
 def m(b="master", c=" "):
     with settings(warn_only=True):
         local("source ~/.zshrc&&source ../bin/activate && python manage.py collectstatic --noinput")
@@ -33,6 +32,16 @@ def m(b="master", c=" "):
         run("source ../bin/activate")
         run("source ../bin/activate&&python manage.py collectstatic --noinput")
         run("cd .. && python restart_uwsgi.py uwsgi_wechat.ini")
+
+
+def build():
+    with settings(warn_only=True):
+        local("source ../bin/activate && python manage.py collectstatic --noinput")
+        local("mkdir -p packages/django_weixin")
+        local("cp -R django_weixin packages/django_weixin")
+        local("cd packages/django_weixin/dist/ && rm *")
+        local("cd packages/django_weixin && python setup.py sdist")
+        local("cd packages/django_weixin && twine upload dist/*")
 
 
 def p(b, c=" 我们一起啪啪啪 "):
